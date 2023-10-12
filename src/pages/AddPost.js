@@ -1,12 +1,14 @@
-import React, { useRef } from "react";
+import React, { useContext, useRef } from "react";
 import Nav from "../components/Nav";
 import Container from "../components/Container";
 import { useNavigate } from "react-router-dom";
+import AuthContext from "../store/auth-context";
 
 function AddPost() {
+  const authCtx = useContext(AuthContext)
   const navigate = useNavigate()
 
-  if (authCtx.isLoggedIn) {
+  if (authCtx.isLoggedIn()) {
     navigate("/add-post")
   }
   function submitHandler(e) {
