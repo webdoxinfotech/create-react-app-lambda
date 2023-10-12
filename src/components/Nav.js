@@ -19,7 +19,7 @@ function Nav({setPosts}) {
 
   function searchHandler(e) {
     e.preventDefault()
-    fetch(`http://sachin12344.pythonanywhere.com/search/?search=${searchTerm}`)
+    fetch(`https://sachin12344.pythonanywhere.com/search/?search=${searchTerm}`)
     .then((res) => res.json())
     .then((data) => setPosts(data));
   }
