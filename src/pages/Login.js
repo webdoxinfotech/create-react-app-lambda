@@ -12,7 +12,7 @@ function Login() {
 
   function submitHandler(e) {
     e.preventDefault();
-    fetch("http://sachin12344.pythonanywhere.com/api-token-auth/", {
+    fetch("https://sachin12344.pythonanywhere.com/api-token-auth/", {
       method: "POST",
       headers: {
         "Content-type": "application/json",
