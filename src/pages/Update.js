@@ -14,14 +14,14 @@ function Update() {
 
       useEffect(function(){
         
-        fetch(`http://sachin12344.pythonanywhere.com/posts/${id}/`).then(res => res.json()).then(data => setPost(data))
+        fetch(`https://sachin12344.pythonanywhere.com/posts/${id}/`).then(res => res.json()).then(data => setPost(data))
 
       }, []) 
 
 
       function updateHandler(e) {
         e.preventDefault()
-        fetch(`http://sachin12344.pythonanywhere.com/posts/${id}/`, {
+        fetch(`https://sachin12344.pythonanywhere.com/posts/${id}/`, {
           method: "PUT",
           headers: {
             "Content-Type": "application/json",

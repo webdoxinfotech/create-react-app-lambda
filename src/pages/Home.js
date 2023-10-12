@@ -12,13 +12,13 @@ function Home() {
   const [posts, setPosts] = useState([]);
 
   useEffect(function () {
-    fetch("http://sachin12344.pythonanywhere.com/posts/")
+    fetch("https://sachin12344.pythonanywhere.com/posts/")
       .then((res) => res.json())
       .then((data) => setPosts(data));
   }, []);
 
   function deleteHandler(id) {
-    fetch(`http://sachin12344.pythonanywhere.com/posts/${id}/`, {
+    fetch(`https://sachin12344.pythonanywhere.com/posts/${id}/`, {
       method: "DELETE",
     }).then((res) => {
       if (res.ok) {

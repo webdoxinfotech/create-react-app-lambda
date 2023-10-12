@@ -16,7 +16,7 @@ function AddPost() {
 
     const formdata = new FormData(e.target)
 
-    fetch("http://sachin12344.pythonanywhere.com/posts/", {
+    fetch("https://sachin12344.pythonanywhere.com/posts/", {
       method: "POST",
       // body: '{"title":"one", "text":"one"}',
       body: formdata,
