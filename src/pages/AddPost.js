@@ -8,7 +8,7 @@ function AddPost() {
   const authCtx = useContext(AuthContext)
   const navigate = useNavigate()
 
-  if (authCtx.isLoggedIn()) {
+  if (authCtx.isLoggedIn) {
     navigate("/add-post")
   }
   function submitHandler(e) {
